@@ -1,0 +1,40 @@
+{
+  "name": "Explorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "set NODE_OPTIONS=--max-old-space-size=8192 && next build",
+    "start": "node app.js --node-flags --max-old-space-size=8192",
+    "dev": "npx nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "knex": "^2.4.2",
+    "knex-paginate": "^3.1.4",
+    "module-alias": "^2.2.3",
+    "moment": "^2.29.4",
+    "morgan": "^1.10.0",
+    "node-schedule": "^2.1.1",
+    "pg": "^8.10.0",
+    "pg-query-stream": "^4.7.1",
+    "stream": "^0.0.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^3.1.11"
+  },
+  "_moduleAliases": {
+    "@": ".",
+    "@config": "src/config",
+    "@controllers": "src/controllers",
+    "@helpers": "src/helpers",
+    "@middlewares": "src/middlewares",
+    "@repositories": "src/repositories",
+    "@routes": "src/routes"
+  }
+}
